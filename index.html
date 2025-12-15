@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- <link rel="stylesheet" href="index.css"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+
+  <title>QuizziQ</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <style>
+    .footer {
+      background-color: #FA7070;
+    }
+  </style>
+</head>
+
+<body onload="loadHome()">
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navbar sticky-top nav nav-tabs"
+    style="background-color: #FA7070; " >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="favicon.png" alt="QuizziQ icon" height="50">uizziQ</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="CustomQuiz.html">Create QuizziQ</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Quizes
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="GKquiz.html">General Knowledge</a></li>
+              <li><a class="dropdown-item" href="Maths.html">Maths</a></li>
+              <li><a class="dropdown-item" href="History.html">History</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logIn.html">Accounts</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- <img src="Quizbg.jpeg" style="opacity: 0.5; width: 100%; height: 1000px;"> -->
+
+  <!-- Uncomment the following iframe tag -->
+  <iframe id="quizFrame" src="" frameborder="0" width="100%" height="600"></iframe>
+
+  <script>
+    // JavaScript to redirect to home.html when the page loads
+    document.addEventListener('DOMContentLoaded', function () {
+      window.location.href = 'home.html';
+    });
+  
+    // Rest of your existing JavaScript code
+    const browseLinks = document.querySelectorAll('.linkss');
+    const quizFrame = document.getElementById('quizFrame');
+  
+    browseLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const quizURL = e.target.getAttribute('href');
+        quizFrame.src = quizURL;
+      });
+    });
+  </script>
+  
+
+  <!-- Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+
+  <footer class="footer sticky-top text-center">
+    <p>&copy; Arya Patil.</p>
+    <div class="credits d-flex justify-content-center align-items-center">
+      <style>
+        .table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+
+        .table img {
+          width: 25px;
+          height: 25px;
+        }
+
+        .credits {
+          margin-top: 10px;
+        }
+
+        .table td {
+          width: 5%;
+          padding: 0;
+          background-color: transparent;
+          border: none;
+        }
+      </style>
+
+      <table class="table">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><a href="https://www.linkedin.com/in/arya-patil-8449a1261/" target="_blank"><img src="linkedin.png"
+                alt=""></a></td>
+          <td><a href="https://github.com/aaryyya" target="_blank"><img src="github.png" alt=""></a></td>
+          <td><a href="https://instagram.com" target="_blank"><img src="instagram.png" alt=""></a></td>
+          <td><a href="https://twitter.com" target="_blank"><img src="teitter.png" alt=""></a></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </footer>
+
+</body>
+
+</html>
